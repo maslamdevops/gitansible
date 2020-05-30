@@ -1,0 +1,10 @@
+# install required packages
+
+- name: install required packages
+            package:
+                    name: "{{ item }}"
+                    state: latest
+            with_items:
+                    - git
+                    - wget
+                    - java-1.8.0-openjdk

@@ -1,0 +1,17 @@
+---
+# tasks file for londonjenkins
+#
+
+- name: setup Jenkins Master
+
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  tasks:
+        - include_tasks: updyum.yml
+        - include_tasks: installpackages.yml
+        - include_tasks: installjenkins.yml
+      
+...
+
